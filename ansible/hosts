@@ -1,0 +1,6 @@
+[pro]
+192.168.0.10        ansible_connection=ssh      ansible_user=pi
+192.168.0.101       ansible_connection=ssh      ansible_user=pep
+
+[prepro]
+192.168.0.104       ansible_connection=ssh      ansible_user=pep
