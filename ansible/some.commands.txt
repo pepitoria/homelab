@@ -1,0 +1,14 @@
+ansible all -m ping -i hosts
+ansible pro -m ping -i hosts
+ansible prepro -m ping -i hosts
+ansible prepro -m ping -i hosts -u root
+
+
+ansible all -a "/bin/echo hello" -i hosts
+
+ansible prepro -m ansible.builtin.service -a "name=docker state=started" -i hosts
+
+ansible prepro -m ansible.builtin.setup -i hosts -u root
+
+
+ansible prepro -m apt -a "upgrade=yes update_cache=yes cache_valid_time=86400" -u root -i hosts

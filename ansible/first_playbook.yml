@@ -1,0 +1,7 @@
+---
+- name: My task
+  hosts: all
+  remote_user: root
+  tasks:
+     - name: Leaving a mark
+       command: "whoami"
